@@ -1,0 +1,43 @@
+{
+  "name": "@metafest/pushyplayer",
+  "version": "0.1.23",
+  "description": "A simple template for a custom React component library",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "pnpm ladle serve",
+    "build": "tsup src/index.ts --format esm,cjs --dts --treeshake"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "autoprefixer": "10.4.15",
+    "postcss": "8.4.30",
+    "tailwindcss": "3.4.17",
+    "tsup": "7.2.0",
+    "typescript": "5.7.3"
+  },
+  "dependencies": {
+    "@ladle/react": "^5.0.1",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-popover": "^1.1.6",
+    "@radix-ui/react-select": "^2.1.6",
+    "@radix-ui/react-slider": "^1.2.3",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tooltip": "^1.1.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.4.5",
+    "lucide-react": "^0.279.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
+}
