@@ -421,7 +421,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, poster }) => {
                       max={duration || 1}
                       step={0.1}
                       onValueChange={([value]) => handleSeek(value)}
-                      className="w-full h-2"
+                      className="w-full h-2 slider-component cursor-pointer"
                       disabled={!canPlayVideo()}
                     />
                   </div>
@@ -483,16 +483,16 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, poster }) => {
                         max={1}
                         step={0.01}
                         onValueChange={([value]) => handleVolumeChange(value)}
-                        className="w-16"
+                        className="w-24 slider-component cursor-pointer"
                         disabled={isLoading}
                       />
-                      <span className="text-xs text-white ml-1">
+                      <span className="text-xs text-white ml-1 min-w-[80px] inline-block time-display">
                         {formatTime(currentTime)} / {formatTime(duration)}
                       </span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      {/* Settings Popover for Fullscreen */}
-                      <Popover
+                      {/* Settings Popover for Fullscreen (Hidden) */}
+                      {/* <Popover
                         open={showSettings}
                         onOpenChange={setShowSettings}
                       >
@@ -559,7 +559,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, poster }) => {
                             </div>
                           </div>
                         </PopoverContent>
-                      </Popover>
+                      </Popover> */}
                       <Button
                         variant="ghost"
                         size="sm"
@@ -582,7 +582,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, poster }) => {
                       max={duration || 1}
                       step={0.1}
                       onValueChange={([value]) => handleSeek(value)}
-                      className="w-full h-2"
+                      className="w-full h-2 slider-component cursor-pointer"
                       disabled={!canPlayVideo()}
                     />
                   </div>
@@ -672,7 +672,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, poster }) => {
                         max={1}
                         step={0.01}
                         onValueChange={([value]) => handleVolumeChange(value)}
-                        className="w-24"
+                        className="w-24 slider-component cursor-pointer"
                         disabled={isLoading}
                       />
                       <span className="text-sm text-white ml-1">
